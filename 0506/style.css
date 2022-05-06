@@ -10,3 +10,9 @@ td {
 	height: 50px;
 	width: 50px;
 }
+td:first-child {
+	background: blue;
+}
+:nth-child(3) > td {
+	background: red;
+}
