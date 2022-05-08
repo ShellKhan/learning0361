@@ -1,0 +1,16 @@
+li { list-style-type: none; } /* Убираем исходную нумерацию у списка */
+   ol { counter-reset: bist1; } /* Инициируем счетчик */
+   ol li:before {
+    counter-increment: bist1; /* Увеличиваем значение счетчика */
+    content: counter(bist1) ". "; /* Выводим число */
+   }
+   ol ol { counter-reset: bist2; } /* Инициируем счетчик вложенного списка */
+   ol ol li:before {
+    counter-increment: bist2; /* Увеличиваем значение счетчика вложенного списка */
+    content: counter(bist1) "." counter(bist2) ". "; /* Выводим число */
+   }
+   ol ol ol{counter-reset: bist3;}
+   ol ol ol li:before{
+       counter-increment: bist3;
+       content: counter(bist1) "." counter(bist2) "." counter(bist3) ". ";
+   }

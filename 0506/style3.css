@@ -16,11 +16,11 @@ p:last-child {
 	position: relative;
 }
 p::before {
-	content: "\2765";
-	margin-right: 16px;
-	color: blue;
-	font-size: 1.2em;
-	line-height: 1em;
+	content: "\29BF";
+	margin-right: 10px;
+	color: red;
+	font-size: 1em;
+	line-height: 2em;
 }
 ul {
 	margin: 0 0 0 100px;
@@ -33,6 +33,6 @@ p:last-child::after {
 	height: 100px;
 	width: 100px;
 	background: green;
-	top: -100px;
+	top: -150px;
 	left: 300px;
 }
