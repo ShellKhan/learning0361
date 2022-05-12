@@ -37,11 +37,12 @@ p:nth-child(4){
 font-family: "thinitalic";
 }
 @font-face{
-    font-family: "light-webfont";
-    font-weight: normal;
+    font-family: "made_theartist";
+    font-weight: bold;
     font-style: normal;
-    src: url('../fonts/roboto-light-webfont.woff2') format('woff2');
+    src: url('../fonts/made_theartist_script_personal_use-webfont.woff2') format('woff2');
 }
 p:nth-child(5){
-font-family: "light-webfont";
+font-family: "made_theartist";
+font-size: 1.5em;
 }
