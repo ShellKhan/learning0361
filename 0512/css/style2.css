@@ -1,1 +1,25 @@
-﻿
+﻿@font-face {
+    
+}
+@font-face {
+    
+}
+@font-face {
+    
+}
+@font-face {
+    
+}
+
+p:first-child {
+    font-family:
+}
+p:nth-child(2) {
+    font-family:
+}
+p:nth-child(3) {
+    font-family:
+}
+p:last-child {
+    font-family:
+}
