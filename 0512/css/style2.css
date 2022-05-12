@@ -1,1 +1,47 @@
-﻿
+﻿@font-face{
+        font-family: "roboto-italic";
+        font-weight: normal;
+        font-style: normal;
+        src: url('../fonts/roboto-italic-webfont.woff2') format('woff2');
+    }
+p:first-child{
+    font-family: "roboto-italic";
+}
+
+@font-face{
+    font-family: "roboto-bold";
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/roboto-bold-webfont.woff2') format('woff2');
+}
+p:nth-child(2){
+font-family: "roboto-bold";
+}
+
+@font-face{
+    font-family: "monkey";
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/beer_money-webfont.woff2') format('woff2');
+}
+p:nth-child(3){
+font-family: "monkey";
+}
+@font-face{
+    font-family: "thinitalic";
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/roboto-thinitalic-webfont.woff2') format('woff2');
+}
+p:nth-child(4){
+font-family: "thinitalic";
+}
+@font-face{
+    font-family: "light-webfont";
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2');
+}
+p:nth-child(5){
+font-family: "light-webfont";
+}
