@@ -1,0 +1,60 @@
+.main{
+    width: 415px;
+    height: 380px;
+    margin: auto;
+    background-color: pink;
+    display: grid;
+    gap: 5px;
+    border: 5px solid pink;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(6, 50px);
+    grid-template-areas:
+    "b b b b"
+    "b b b b"
+    "c c c c"
+    "c c c c"
+    "c c c c"
+    "c c c c";
+}
+.black{
+    grid-area: b;
+    background: black;
+    color: #7f7;
+    font: 50px/85px Arial;
+    text-align: right;
+    padding: 10px;
+    
+}
+.button{
+    background-color: grey;
+    color: white;
+    font: 30px/50px Arial;
+    text-align: center;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    user-select: none;
+}
+.button:hover {
+    cursor: pointer;
+}
+.button:active {
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5);
+}
+.color {
+    background: white;
+    color: black;
+}
+.action {
+    background: red;
+    color: yellow;
+}
+sup {
+    font-size: 15px;
+}
+span {
+    margin-top: -10px;
+    display: inline-block;
+}
+strong {
+    color: red;
+}
