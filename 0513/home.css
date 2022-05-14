@@ -1,0 +1,49 @@
+h1{
+    text-align: center;
+}
+.main{
+    margin: auto;
+    display: grid;
+    width: 500px;
+    height: 500px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    background: black;
+    border: 5px solid black;
+    font-size: 1.5em;
+
+}
+.main div{
+    border: 1px solid black;
+}
+
+.header{
+    grid-column: 1/4;
+    grid-row: 1;
+    background: purple;
+}
+.footer{
+    grid-column: 1/4;
+    grid-row: 6;
+    background: green;
+}
+.left{
+    grid-column: 1;
+    grid-row: 2/6;  
+    background: yellow;
+}
+.right{
+    grid-column: 2/4;
+    grid-row: 2/4; 
+    background: violet; 
+}
+.a{
+    grid-column: 2;
+    grid-row: 4/6;  
+    background: blue;  
+}
+.b{
+    grid-column: 3;
+    grid-row: 4/6;  
+    background: darkolivegreen;
+}
