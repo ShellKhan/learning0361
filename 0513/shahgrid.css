@@ -1,0 +1,28 @@
+.table {
+    display: grid;
+    margin: auto;
+    width: 1000px;
+    height: 1000px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+.table > div {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.th {
+    background: lightgray;
+    color: blue;
+    font-weight: bold;
+}
+
+.td {
+    background: white;
+    color: black;
+}
+.td1 {
+    background: black;
+    color: white;
+}
