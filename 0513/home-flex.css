@@ -1,0 +1,56 @@
+h1{
+    text-align: center;
+}
+.bg{
+    background: black;
+    width: 500px;
+    margin: auto;
+}
+.main{
+    display: flex;
+    flex-flow: column wrap;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+}
+
+.header, .footer{
+    margin: auto;
+    width: 500px;
+    height: 100px;
+}
+.header{
+    background: purple;
+    margin-bottom: 5px;
+}
+.footer{
+    background: green;
+    margin-top: 5px;
+}
+.left{
+    
+    background: yellow;
+    flex-basis: 100%;
+    margin-right: 5px;
+}
+.right{
+    background: violet; 
+    flex-grow: 1;
+    margin-bottom: 5px;
+}
+.main2{
+    display: flex;
+    flex-flow: row;
+    flex-basis: 50%;
+    gap: 5px;
+}
+.a{
+    
+    background: blue; 
+    width: 50%;
+}
+.b{
+   
+    background: darkolivegreen;
+    width: 50%;
+}
