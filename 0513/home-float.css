@@ -1,0 +1,55 @@
+
+h1{
+    text-align: center;
+}
+
+.main{
+    width: 600px;
+    height: 340px;
+    margin: auto;
+    font-size: 1.5em;
+}
+
+.header, .footer{
+    width: 600px;
+    height: 60px;
+    margin: 5px auto;
+    font-size: 1.5em;
+}
+.header{
+    background: purple;
+}
+.footer{
+    background: green;
+}
+.left{
+    height: 100%;
+    width: 200px;
+    float: left;
+    background: yellow;
+    box-sizing: border-box;
+    border-right: 5px solid white;
+
+}
+.right{
+    background: violet; 
+    height: 50%;
+    box-sizing: border-box;
+    border-bottom: 5px solid white;
+
+}
+
+.a{ 
+    background: blue; 
+    width: 200px;
+    float: left;
+    height: 50%;
+    box-sizing: border-box;
+    border-right: 5px solid white;
+}
+
+.b{
+    background: darkolivegreen;
+    height: 50%;
+}
+
