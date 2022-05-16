@@ -4,8 +4,9 @@ h1{
 .main{
     margin: auto;
     display: grid;
-    width: 500px;
-    height: 500px;
+    /*width: 500px;
+    height: 500px;*/
+    height: 100vh;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
     background: black;
@@ -15,6 +16,9 @@ h1{
 }
 .main div{
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header{
