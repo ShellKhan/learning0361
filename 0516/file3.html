@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Домашнее задание Float</title>
+        
+        <meta charset="utf-8">
+        
+        <style>
+            html {
+                height: 100%;
+            }
+            body {
+                height: 100%;
+                margin: 0;
+            }
+            .wrapper {
+                
+            }
+            header {
+                height: 200px;
+                background: gray;
+            }
+            footer {
+                height: 200px;
+                background: brown;
+                clear: left;
+            }
+            aside {
+                width: 200px;
+                height: 400px;
+                float: left;
+            }
+            article {
+                background: cyan;
+                height: 200px;
+                width: calc(100% - 200px);
+                float: left;
+            }
+            .oneblock {
+                background: lightgreen;
+                float: left;
+                height: 200px;
+                width: calc(50% - 100px);
+            }
+            .oneblock + .oneblock {
+                background: green;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="wrapper">
+            <header>CONTENT</header>
+            
+            <aside>CONTENT</aside>
+            
+            <article>CONTENT</article>
+            
+            <div class="oneblock">CONTENT</div>
+            
+            <div class="oneblock">CONTENT</div>
+            
+            <footer>CONTENT</footer>
+        </div>
+    </body>
+</html>
