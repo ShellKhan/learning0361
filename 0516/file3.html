@@ -23,26 +23,33 @@
             footer {
                 height: 200px;
                 background: brown;
-                clear: left;
+                clear: both;
             }
             aside {
                 width: 200px;
-                height: 400px;
+                height: 600px;
+                background: yellow;
                 float: left;
+            }
+            .content {
+                margin: 0 0 0 200px;
+            }
+            .content::after {
+                content: '';
+                clear: left;
+                display: block;
             }
             article {
                 background: cyan;
                 height: 200px;
-                width: calc(100% - 200px);
-                float: left;
             }
-            .oneblock {
+            .block {
+                float: left;
+                width: 50%;
                 background: lightgreen;
-                float: left;
                 height: 200px;
-                width: calc(50% - 100px);
             }
-            .oneblock + .oneblock {
+            .block + .block {
                 background: green;
             }
         </style>
@@ -54,12 +61,13 @@
             
             <aside>CONTENT</aside>
             
-            <article>CONTENT</article>
-            
-            <div class="oneblock">CONTENT</div>
-            
-            <div class="oneblock">CONTENT</div>
-            
+            <div class="content">
+                <article>CONTENT</article>
+                
+                <div class="block">CONTENT</div>
+                
+                <div class="block">CONTENT</div>
+            </div>
             <footer>CONTENT</footer>
         </div>
     </body>
