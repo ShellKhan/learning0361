@@ -47,6 +47,12 @@ main {
     width: 1140px;
     margin: 0 auto;
 }
+h3 {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 46px;
+    text-align: center;
+}
 /* header */
 header {
     position: absolute;
@@ -88,9 +94,8 @@ footer .container {
 }
 footer h3 {
     margin: 27px 0;
-    font-size: 36px;
     font-weight: 400;
-    line-height: 46px;
+    text-align: left;
     width: 300px;
 }
 footer p {
