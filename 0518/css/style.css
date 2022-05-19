@@ -23,7 +23,7 @@ html, body, body div, span, label, h1, h2, h3, h4, h5, h6, p, a, em, font, img, 
 	border: none;
 	outline: none;
 	background: none;
-	list-style: none;
+    list-style: none;
 }
 /* font adjusting hack */
 html * {
@@ -34,8 +34,14 @@ html {
     height: 100%;
 }
 body {
+<<<<<<< HEAD
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     min-height: 100%;
+=======
+    font: normal 400 16px / 26px 'Roboto', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.05em;
+    height: 100%;
+>>>>>>> 57a5342249dbb37509b8eff7475dd0fc039889b8
     display: flex;
     flex-direction: column;
 }
@@ -49,6 +55,12 @@ main {
     height: 48px;
     display: flex;
     justify-content: space-between;
+}
+h3 {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 46px;
+    text-align: center;
 }
 /* header */
 header {
@@ -181,13 +193,67 @@ section .container1{
 footer {
     flex: 0 0 auto;
     background: #316099;
-    color: #ffffff;
-    height: 657px;
+    color: #fff;
 }
 footer section + section {
     border-top: 2px solid rgba(255,255,255,0.4);
 }
+<<<<<<< HEAD
 */
+=======
+footer .container {
+    padding: 64px 0;
+}
+footer h3 {
+    margin: 27px 0;
+    font-weight: 400;
+    text-align: left;
+    width: 300px;
+}
+footer p {
+    margin: 32px 0;
+    opacity: 0.6;
+    width: 480px;
+}
+footer ol {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+footer li {
+    flex: 0 0 316px;
+    padding-left: 42px;
+    position: relative;
+}
+footer li::before {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: 'T.';
+}
+footer li:first-child::before {
+    content: 'A.';
+}
+footer li:last-child::before {
+    content: 'E.';
+}
+footer button {
+    float: right;
+    margin-top: -160px;
+    width: 340px;
+    height: 56px;
+    color: #fff;
+    background: #5a98d0;
+    font: normal 400 16px / 26px 'Roboto', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.04em;
+}
+.copy {
+    margin: 64px 0 0;
+    opacity: 0.4;
+}
+
+>>>>>>> 57a5342249dbb37509b8eff7475dd0fc039889b8
 
 
 
