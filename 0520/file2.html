@@ -13,13 +13,15 @@
          * 4) выводим результат
          */
         let question = 'Зимой и летом одним цветом';
+        
         //let answer = 'елка';
         let answer = ['елка', 'кровища', 'лампочка', 'свитер']; // Array
+        
         let flag = false;
         
         let useranswer = prompt(question).toLowerCase().replace('ё', 'е');
         
-        for (let i = 0; i < answer.length ; i++) {
+        for (let i = 0; i < answer.length; i++) {
             if (useranswer == answer[i]) {
                 alert('Вы угадали!');
                 flag = true;
@@ -35,6 +37,8 @@
         } else {
             alert('Вы не угадали!');
         }
+        
+        useranswer == answer ? alert('Вы угадали!') : alert('Вы не угадали!');
         */
     </script>
 </head>
