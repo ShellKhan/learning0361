@@ -17,19 +17,19 @@
         //let answer = 'елка';
         let answer = ['елка', 'кровища', 'лампочка', 'свитер']; // Array
         
-        let flag = false;
+        let answerIsRight = false;
         
         let useranswer = prompt(question).toLowerCase().replace('ё', 'е');
         
         for (let i = 0; i < answer.length; i++) {
             if (useranswer == answer[i]) {
                 alert('Вы угадали!');
-                flag = true;
+                answerIsRight = true;
                 break;
             }
         }
         
-        if (!flag) alert('Вы не угадали!');
+        if (!answerIsRight) alert('Вы не угадали!');
         
         /*
         if (useranswer == answer) {

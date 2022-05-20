@@ -9,7 +9,7 @@
         let num = Math.floor(Math.random() * 100 + 1);
         alert(num);
         
-        let flag = false;
+        let answerIsRight = false;
         
         upper: for (let i = 0; i < 10; i++) {
             let usernum = parseInt(prompt('Введите число:'));
@@ -27,12 +27,12 @@
                     alert('Надо больше');
                     break;
                 default:
-                    flag = true;
+                    answerIsRight = true;
                     break upper;
             }
         }
         
-        if (flag) {
+        if (answerIsRight) {
             alert('Вы угадали!');
         } else {
             alert('Вы не угадали!');
