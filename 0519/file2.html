@@ -3,29 +3,25 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Переменные</title>
+    <title>Елка или Ёлка</title>
     
     <script>
-        "use strict"
-        
-        let a; // undefined
-        a = 1;
-        const B = 2;
-        var c = 5;
-        c = a;
-        a = 3;
-        {
-            console.log(0);
-            console.log(a);
-            console.log(B);
-            console.log(c);
+        let question = 'Зимой и летом одним цветом';
+        let answer = ['елка', 'кровища', 'свитер', 'батя'];
+        let useranswer = prompt(question).toLowerCase().replace('ё', 'е');
+        let flag = false;
+
+        for(i = 0; i < answer.length; i++){
+            if (useranswer == answer[i]){
+            alert('ai maladec');
+            flag = true;
+            break;
+            }
         }
-        console.error("That's all!"); // это однострочный комментарий. он заканчивается там, где кончается строка.
-        /*
-        Это многострочный комментарий.
-        // внутри многострочного комментария может быть однострочный.
-        */
-    </script>
+       if (!flag) alert('Durak?');
+        
+
+</script>
 </head>
 <body></body>
 </html>
