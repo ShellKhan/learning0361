@@ -120,9 +120,7 @@ button{
     position: relative;
     top: 111px;
     width: 553.68px;
-    height: 481.39px;
-
-    
+    height: 481.39px;    
 }
 
 main{
@@ -202,7 +200,13 @@ padding-bottom: 28px;
     width: 1140px;
     display: grid;
     margin: 64px 113px 112px;
+    grid-area:
+    "h2 h2"
+    "p  p "
+    "t  t "
+    "l  r";
 }
+
 
 /*footer {
     flex: 0 0 auto;
