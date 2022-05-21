@@ -6,8 +6,26 @@
     <title>Переменные</title>
     
     <script>
-        let a = prompt('Введите число:');
-        document.write(`Вы ввели ${a}`);
+        /*let a = prompt('Введите число:');
+        document.write(`Вы ввели ${a}`);*/
+        let num = Math.floor(Math.random() * 100 + 1);
+        while(true){
+            let numb = parseInt(prompt('Введите число: '));
+            if (isNaN(numb)) {
+                alert('Я же число прошу, ну');
+                continue;
+            }
+                
+            if (num == numb) {
+                break;
+            } else if (num < numb) {
+                alert('Надо меньше, дружок');
+            } else if (num > numb) {
+                alert('Надо больше, дружок');           
+            }
+        }
+            alert('Угадал!!');
+
     </script>
 </head>
 <body></body>
