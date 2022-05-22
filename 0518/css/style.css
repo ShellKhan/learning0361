@@ -84,7 +84,7 @@ header .container:last-child{
     background-position: right; 
 }
 header .container:last-child div{
-    width: 504px;
+    width: 510px;
 }
 
 header h1{
@@ -99,21 +99,25 @@ header .container p{
     color: #1F3F68;
     opacity: 0.6;
     padding-top: 32px;
+    width: 425px;
 
 }
 header .button{
     padding-top: 71px;
 }
-header button{
+.button a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 220px;
     height: 56px;
     background: #5A98D0;
     box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
     border-radius: 10px;
     line-height: 26px;
-    text-align: center;
     letter-spacing: 0.04em;
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 main {

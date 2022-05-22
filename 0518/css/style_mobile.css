@@ -2,6 +2,287 @@
     body {
         min-width: 320px;
     }
+
+    header {
+        padding-top: 34px;
+        height: 376px;
+
+    }
+    header .container{
+        width: 340px;
+        margin: 0 auto;
+    }
+    header .container:first-child {
+        height: 48px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    
+    .container a {
+        display: block;
+        height: 48px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .logo {
+        width: 46px;
+        background-image: url('../img/logo.png');
+    }
+    .user {
+        width: 34px;
+        background-image: url('../img/user.png');
+    }
+    
+    header .container:last-child{
+        padding-top: 28px;
+        background: none;
+
+    }
+    header .container:last-child div{
+        width: 343px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    header h1{
+        font-size: 32px;
+        line-height: 38px;
+        color: #1F3F68;
+        padding: 0 10px;
+   
+    }
+    header .container p{
+        color: #1F3F68;
+        opacity: 0.6;
+        padding-top: 12px;
+    
+    }
+    header .button{
+        padding-top: 32px;
+    }
+    header button{
+        width: 108px;
+        height: 28px;
+        background: none;
+        border: none;
+    }
+    
+    main {
+        flex: 1 0 auto;
+        margin: 64px auto;
+        width: 1140px;
+    }
+    
+    h2{
+        padding: 0;
+        flex: none;
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 46px;
+        letter-spacing: 0.05em;
+        color: #000000;
+        text-align: center;
+    
+    }
+    
+    .main__container__one{
+        height: max-content;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    
+    .main__block{
+        width: 359px;
+        height: 480px;
+        margin-top: 64px;
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        padding: 44px 32px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        border-radius: 10px;
+    }
+    .one{
+        background-image: url(../img/left-img.png);
+    }
+    .two{
+        background-image: url(../img/center-img.png);   
+    }
+    .three{
+        background-image: url(../img/right-img.png);
+    }
+    .main__block h3{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px; 
+        letter-spacing: 0.05em;
+        color: #1F3F68;
+        text-align: left;
+    
+    }
+    .main__block a{
+    
+        font-size: 14px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        color: #5A98D0;
+        text-decoration: none;
+        background-image: url(../img/strelka.png);
+        background-position: 100px center;
+        background-repeat: no-repeat;
+    
+    }
+    
+    .main__block p{
+        letter-spacing: 0.05em;
+        color: #1F3F68;
+        opacity: 0.6;
+        padding-top: 15px;
+        padding-bottom: 28px;
+    }
+    
+    .main__container__two{
+        height: 1123px;
+        width: 1140px;
+        display: grid;
+        margin: 64px auto;
+        grid-template-rows: max-content max-content 480px 417px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "h2 h2"
+        "p  p "
+        "t  t "
+        "l  r";
+        gap: 32px;
+        justify-items: center;
+    }
+    .main__container__two h2{
+        grid-area: h2;
+    }
+    .main__container__two p{
+        grid-area: p;
+        width: 750px;
+        text-align: center;
+    }
+    .main__container__two .top{
+        grid-area: t;
+        width: 100%;
+        height: 480px;
+        background-image: url(../img/top-imgg.png);
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 64px;
+        font-size: 32px;
+        line-height: 46px;
+        text-align: right;
+        letter-spacing: 0.05em;
+        box-sizing: border-box;
+        color: #FFFFFF;
+    }
+    .main__container__two .left{
+        background-image: url(../img/left-imgg.png);
+        border: 1px solid transparent;
+        border-radius: 10px;
+        grid-area: l;
+        width: 100%;
+        height: 417px;
+        font-size: 28px;
+        line-height: 46px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        padding: 32px;
+        box-sizing: border-box;
+    
+    }
+    .main__container__two .right{
+        background-image: url(../img/right-imgg.png);
+        border: 1px solid transparent;
+        border-radius: 10px;
+        grid-area: r;
+        width: 100%;
+        height: 417px;
+        font-size: 28px;
+        line-height: 46px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        padding: 32px;
+        box-sizing: border-box;
+    }
+    
+    footer {
+        flex: 0 0 auto;
+        background: #316099;
+        color: #fff;
+        width: 100vw;
+    }
+    footer section{
+        width: 1140px;
+        margin: 0 auto;
+    }
+    footer section + section {
+        border-top: 2px solid rgba(255,255,255,0.4);
+    }
+    footer .container {
+        padding: 64px 0;
+    }
+    footer h3 {
+        margin: 27px 0;
+        font-weight: 400;
+        text-align: left;
+        width: 336px;
+    }
+    footer p {
+        margin: 32px 0;
+        opacity: 0.6;
+        width: 480px;
+    }
+    
+    footer ol {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    footer li {
+        flex: 0 0 316px;
+        padding-left: 42px;
+        position: relative;
+    }
+    footer li::before {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: 'T.';
+    }
+    footer li:first-child::before {
+        content: 'A.';
+    }
+    footer li:last-child::before {
+        content: 'E.';
+    }
+    footer button {
+        float: right;
+        margin-top: -160px;
+        width: 340px;
+        height: 56px;
+        color: #fff;
+        background: #5a98d0;
+        font: normal 400 16px / 26px 'Roboto', Arial, Helvetica, sans-serif;
+        letter-spacing: 0.04em;
+    }
+    .copy {
+        margin: 64px 0 0;
+        opacity: 0.4;
+    }
+    
+    
+    /*
     .container {
         width: auto;
         min-width: 288px;
@@ -43,3 +324,4 @@
         margin-top: 32px;
     }
 }
+*/
