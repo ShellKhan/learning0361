@@ -116,16 +116,6 @@ button{
     letter-spacing: 0.04em;
     color: #FFFFFF;
 }
-.right-img{
-    background-image: url(../img/header.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    flex: none;
-    position: relative;
-    top: 111px;
-    width: 553.68px;
-    height: 481.39px;    
-}
 
 main {
     flex: 1 0 auto;
