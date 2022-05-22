@@ -96,7 +96,6 @@ h1{
 
 }
 .container p{
-    line-height: 26px;
     color: #1F3F68;
     opacity: 0.6;
     padding-top: 32px;
@@ -119,15 +118,10 @@ button{
 
 main {
     flex: 1 0 auto;
-}
-.container1{
-    height: max-content;
+    margin: 64px auto;
     width: 1140px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    margin: 64px 113px;
 }
+
 h2{
     padding: 0;
     flex: none;
@@ -136,9 +130,18 @@ h2{
     line-height: 46px;
     letter-spacing: 0.05em;
     color: #000000;
+    text-align: center;
 
 }
-.block{
+
+.main__container__one{
+    height: max-content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.main__block{
     width: 359px;
     height: 480px;
     margin-top: 64px;
@@ -162,15 +165,16 @@ h2{
 .three{
     background-image: url(../img/right-img.png);
 }
-.block h3{
+.main__block h3{
+    font-weight: 400;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 30px; 
     letter-spacing: 0.05em;
     color: #1F3F68;
     text-align: left;
 
 }
-.block a{
+.main__block a{
     height: 40px;
     font-size: 14px;
     line-height: 30px;
@@ -180,20 +184,19 @@ h2{
 
 }
 
-.block p{
-line-height: 26px;
-letter-spacing: 0.05em;
-color: #1F3F68;
-opacity: 0.6;
-padding-top: 15px;
-padding-bottom: 28px;
+.main__block p{
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    opacity: 0.6;
+    padding-top: 15px;
+    padding-bottom: 28px;
 }
 
-.container2{
+.main__container__two{
     height: 1123px;
     width: 1140px;
     display: grid;
-    margin: 64px 113px 112px;
+    margin: 64px auto;
     grid-template-rows: max-content max-content 480px 417px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
@@ -204,15 +207,15 @@ padding-bottom: 28px;
     gap: 32px;
     justify-items: center;
 }
-.container2 h2{
+.main__container__two h2{
     grid-area: h2;
 }
-.container2 p{
+.main__container__two p{
     grid-area: p;
     width: 750px;
     text-align: center;
 }
-.container2 .top{
+.main__container__two .top{
     grid-area: t;
     width: 100%;
     height: 480px;
@@ -227,7 +230,7 @@ padding-bottom: 28px;
     box-sizing: border-box;
     color: #FFFFFF;
 }
-.container2 .left{
+.main__container__two .left{
     background-image: url(../img/left-imgg.png);
     border: 1px solid transparent;
     border-radius: 10px;
@@ -242,7 +245,7 @@ padding-bottom: 28px;
     box-sizing: border-box;
 
 }
-.container2 .right{
+.main__container__two .right{
     background-image: url(../img/right-imgg.png);
     border: 1px solid transparent;
     border-radius: 10px;
@@ -261,6 +264,11 @@ footer {
     flex: 0 0 auto;
     background: #316099;
     color: #fff;
+    width: 100%;
+}
+footer section{
+    width: 1140px;
+    margin: 0 auto;
 }
 footer section + section {
     border-top: 2px solid rgba(255,255,255,0.4);
@@ -279,6 +287,7 @@ footer p {
     opacity: 0.6;
     width: 480px;
 }
+
 footer ol {
     display: flex;
     justify-content: space-between;
