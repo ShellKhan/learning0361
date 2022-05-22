@@ -40,28 +40,27 @@ body {
     display: flex;
     flex-direction: column;
 }
-main {
-    flex: 1 0 auto;
-}
 
-.container {
+header {
+    height: 768px;
+    padding-top: 34px;
+    box-sizing: border-box;
+    width: 100vw;
+    flex: none;
+    background: linear-gradient(0deg, #EBF3FB 0%, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+}
+header .container{
     width: 1140px;
     margin: 0 auto;
+}
+header .container:first-child {
     height: 48px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
-header {
-
-    height: 768px;
-    padding-top: 34px;
-    width: 100%;
-    flex: none;
-    background: linear-gradient(0deg, #EBF3FB 0%, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
-    
-}
-header a {
+.container a {
     display: block;
     height: 48px;
     background-position: center center;
@@ -76,13 +75,18 @@ header a {
     background-image: url('../img/user.png');
 }
 
-.left-txt{
-    flex: none;
-    position: relative;
-    top: 107px;
-    width: 504px;
+header .container:last-child{
+    padding-top: 107px;
+    box-sizing: border-box;
     height: 100%;
+    background-image: url(../img/header.png);
+    background-repeat: no-repeat;
+    background-position: right; 
 }
+header .container:last-child div{
+    width: 504px;
+}
+
 h1{
     font-weight: 300;
     font-size: 64px;
@@ -91,7 +95,7 @@ h1{
     color: #1F3F68;
 
 }
-.text{
+.container p{
     line-height: 26px;
     color: #1F3F68;
     opacity: 0.6;
@@ -123,8 +127,8 @@ button{
     height: 481.39px;    
 }
 
-main{
-    margin: 0 auto;
+main {
+    flex: 1 0 auto;
 }
 .container1{
     height: max-content;
