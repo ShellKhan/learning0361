@@ -87,7 +87,7 @@ header .container:last-child div{
     width: 504px;
 }
 
-h1{
+header h1{
     font-weight: 300;
     font-size: 64px;
     line-height: 74px;
@@ -95,16 +95,16 @@ h1{
     color: #1F3F68;
 
 }
-.container p{
+header .container p{
     color: #1F3F68;
     opacity: 0.6;
     padding-top: 32px;
 
 }
-.button{
+header .button{
     padding-top: 71px;
 }
-button{
+header button{
     width: 220px;
     height: 56px;
     background: #5A98D0;
@@ -175,12 +175,15 @@ h2{
 
 }
 .main__block a{
-    height: 40px;
+
     font-size: 14px;
     line-height: 30px;
     letter-spacing: 0.05em;
     color: #5A98D0;
     text-decoration: none;
+    background-image: url(../img/strelka.png);
+    background-position: 100px center;
+    background-repeat: no-repeat;
 
 }
 
@@ -264,7 +267,7 @@ footer {
     flex: 0 0 auto;
     background: #316099;
     color: #fff;
-    width: 100%;
+    width: 100vw;
 }
 footer section{
     width: 1140px;
