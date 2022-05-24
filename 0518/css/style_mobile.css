@@ -1,40 +1,19 @@
 ﻿@media screen and (max-width: 760px) {
-    body {
-        min-width: 320px;
-    }
 
     header {
-        padding-top: 34px;
         height: 376px;
-
+        padding-top: 16px;
     }
     header .container{
-        width: 100vw;
+        width: 340px;
         margin: 0 auto;
     }
-    header .container:first-child {
-        height: 48px;
-        display: flex;
-        justify-content: space-between;
-        box-sizing: border-box;
-        padding: 0 16px;
-    }
-    
-    .container a {
-        display: block;
-        height: 48px;
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
-    .logo {
-        width: 46px;
-        background-image: url('../img/logo.png');
-    }
-    .user {
-        width: 34px;
-        background-image: url('../img/user.png');
-    }
-    
+   header .container:first-child{
+       width: 100%;
+       margin: 0 auto;
+       padding: 0 16px;
+       box-sizing: border-box;
+   }
     header .container:last-child{
         padding-top: 28px;
         background: none;
@@ -45,7 +24,7 @@
         margin: 0 auto;
         text-align: center;
     }
-    
+     
     header h1{
         font-size: 32px;
         line-height: 38px;
@@ -59,6 +38,7 @@
     }
     header .button{
         padding-top: 32px;
+
     }
     .button a{
         flex: none;
@@ -70,8 +50,6 @@
         text-decoration: none;
         font-size: 12px;
         margin: 0 auto;
-
-
     }
     
     main {
@@ -86,11 +64,15 @@
     
     }
     
+    .main__container__one{
+        margin: 32 auto;
+    }    
+
     .main__block{
-        width: 335px;
+        width: 336px;
         height: 457px;
-        margin-top: 32px;
-        padding: 41px 30px 21px;
+        padding: 40px 30px;
+        margin-bottom: 32px;
     }
     .one{
         background-image: url(../img/left-img.png);
@@ -100,35 +82,6 @@
     }
     .three{
         background-image: url(../img/right-img.png);
-    }
-    .main__block h3{
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px; 
-        letter-spacing: 0.05em;
-        color: #1F3F68;
-        text-align: left;
-    
-    }
-    .main__block a{
-    
-        font-size: 14px;
-        line-height: 30px;
-        letter-spacing: 0.05em;
-        color: #5A98D0;
-        text-decoration: none;
-        background-image: url(../img/strelka.png);
-        background-position: 100px center;
-        background-repeat: no-repeat;
-    
-    }
-    
-    .main__block p{
-        letter-spacing: 0.05em;
-        color: #1F3F68;
-        opacity: 0.6;
-        padding-top: 15px;
-        padding-bottom: 28px;
     }
     
     .main__container__two{
@@ -232,3 +185,120 @@
         margin-top: 32px;
     }
 }
+
+/*
+@media screen and (max-width: 1200px) {
+    
+    
+      header {
+          height: 768px;
+          padding-top: 34px;
+          box-sizing: border-box;
+          width: 100%;
+          flex: none;
+          background: linear-gradient(0deg, #EBF3FB 0%, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+      }
+      header .container{
+          width: 704px;
+      }
+     
+      header .container:last-child{
+          padding-top: 112px;
+          background-position: right;
+          background-size: 336px 292px;
+          background-position-y: 65%;
+
+      }
+      header .container:last-child div{
+          width: 510px;
+      }
+      
+      header .container p{
+          width: 368px;
+      
+      }
+      
+      main {
+          width: 704px;
+      }
+      
+      .main__container__one{
+          margin: 64px 20px;
+          justify-content: center;
+      }
+      .main__block{
+          width: 336px;
+          height: 457px;
+          padding: 40px 30px;
+          margin-bottom: 32px;
+      }
+      .one{
+          background-image: url(../img/left-img.png);
+      }
+      .two{
+          background-image: url(../img/center-img.png);   
+      }
+      .three{
+          background-image: url(../img/right-img.png);
+      }
+        
+      .main__container__two{
+          width: 704px;
+          grid-template-rows: max-content max-content 297px 253px;
+
+      }
+
+      .main__container__two p{
+          width: 520px;
+      }
+      .main__container__two .top{
+          height: 297px;
+          background-size: contain;
+
+      }
+      .main__container__two .left{
+          height: 253px;
+          padding: 20px;
+          background-size: contain;
+
+      }
+      .main__container__two .right{
+        height: 253px;
+        padding: 20px;
+        background-size: contain;
+
+      }
+      
+      footer .container {
+        padding: 47px 0px;
+        box-sizing: border-box;
+        width: 704px;
+    }
+    footer h3 {
+        margin: -16px 0 32px;
+    }
+    footer p {
+        width: 336px;
+        margin: 0;
+    }
+    footer button {
+        margin-top: -115px;
+        width: 134px;
+        height: 32px;
+    }
+
+    footer ol {
+        display: block;
+    }
+    footer li {
+        padding-left: 59px;
+    }
+    footer li + li {
+        margin-top: 26px;
+    }
+    footer li br {
+        display: none;
+    }
+    
+}     
+*/
