@@ -1,24 +1,89 @@
 ﻿@media screen and (max-width: 1200px) {
     
-    .main__container__two{
-        height: max-content;
-        width: 705px;
-    }
-    .main__container__two__block{
-        background-size:contain;
-        background-repeat: no-repeat;
-        grid-template-rows: max-content max-content 297px 253px;
-    }
+    
+      header {
+          height: 768px;
+          padding-top: 34px;
+          box-sizing: border-box;
+          width: 100%;
+          flex: none;
+          background: linear-gradient(0deg, #EBF3FB 0%, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+      }
+      header .container{
+          width: 704px;
+      }
+     
+      header .container:last-child{
+          padding-top: 112px;
+          background-position: right;
+          background-size: 336px 292px;
+          background-position-y: 65%;
 
-    .container {
-        width: 704px;
-    }
-    header {
-        top: 47px;
-    }
-    footer .container {
-        padding: 64px 92px;
+      }
+      header .container:last-child div{
+          width: 510px;
+      }
+      
+      header .container p{
+          width: 368px;
+      
+      }
+      
+      main {
+          width: 704px;
+      }
+      
+      .main__container__one{
+          margin: 64px 20px;
+          justify-content: center;
+      }
+      .main__block{
+          width: 336px;
+          height: 457px;
+          padding: 40px 30px;
+          margin-bottom: 32px;
+      }
+      .one{
+          background-image: url(../img/left-img.png);
+      }
+      .two{
+          background-image: url(../img/center-img.png);   
+      }
+      .three{
+          background-image: url(../img/right-img.png);
+      }
+        
+      .main__container__two{
+          width: 704px;
+          grid-template-rows: max-content max-content 297px 253px;
+
+      }
+
+      .main__container__two p{
+          width: 520px;
+      }
+      .main__container__two .top{
+          height: 297px;
+          background-size: contain;
+
+      }
+      .main__container__two .left{
+          height: 253px;
+          padding: 20px;
+          background-size: contain;
+
+      }
+      .main__container__two .right{
+        height: 253px;
+        padding: 20px;
+        background-size: contain;
+
+      }
+      
+      footer .container {
+        padding: 47px 0px;
         box-sizing: border-box;
+        width: 704px;
     }
     footer h3 {
         margin: -16px 0 32px;
@@ -32,15 +97,7 @@
         width: 134px;
         height: 32px;
     }
-    /*
-    footer ol {
-        flex-direction: column;
-        height: 130px;
-    }
-    footer li {
-        flex-basis: 26px;
-    }
-    */
+
     footer ol {
         display: block;
     }
@@ -53,4 +110,5 @@
     footer li br {
         display: none;
     }
-}
+    
+}     

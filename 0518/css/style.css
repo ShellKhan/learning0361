@@ -45,7 +45,7 @@ header {
     height: 768px;
     padding-top: 34px;
     box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
     flex: none;
     background: linear-gradient(0deg, #EBF3FB 0%, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
 }
@@ -143,12 +143,12 @@ h2{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    margin-top: 64px;
 }
 
 .main__block{
     width: 359px;
     height: 480px;
-    margin-top: 64px;
     box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
     padding: 44px 32px;
     box-sizing: border-box;
@@ -270,22 +270,23 @@ footer {
     flex: 0 0 auto;
     background: #316099;
     color: #fff;
-    width: 100vw;
+    width: 100%;
 }
-footer section{
-    width: 1140px;
-    margin: 0 auto;
-}
+
 footer section + section {
     border-top: 2px solid rgba(255,255,255,0.4);
 }
 footer .container {
     padding: 64px 0;
+    width: 1140px;
+    margin: 0 auto;
 }
 footer h3 {
     margin: 27px 0;
-    font-weight: 400;
     text-align: left;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
     width: 336px;
 }
 footer p {
