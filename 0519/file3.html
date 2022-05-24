@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Переменные</title>
+    <title>Переменные + занятие 23.05</title>
     
     <script>
         /*let a = prompt('Введите число:');
-        document.write(`Вы ввели ${a}`);*/
+        document.write(`Вы ввели ${a}`);
         let num = Math.floor(Math.random() * 100 + 1);
         while(true){
             let numb = parseInt(prompt('Введите число: '));
@@ -26,6 +26,67 @@
         }
             alert('Угадал!!');
 
+        let myfunc = function(){
+            let useranswer = parseInt(prompt('Введите число '));
+            alert(useranswer * 4);
+        }
+        myfunc();
+        myfunc();
+        myfunc();
+        myfunc();
+        
+       function getString(){
+           let useranswer = prompt('Введите слово ');
+           console.log(`Вы ввели '${useranswer}'`);
+       }
+       getString();
+    
+       let cashe = 100;
+       let bag = [];
+       function buy (name, price){
+           if (cashe < price){
+               console.log ('Не хватает денег');
+               return false;
+           }
+           cashe -= price;
+           bag.push(name);
+           return true;
+
+           let obj = {
+            getName: function(){
+                this.name = prompt('Введите Ваше имя')
+            },
+            greet: function(){
+                alert('Здравствуй, ' + this.name)
+            }
+           }
+           obj.getName();
+           obj.greet();
+        */
+         
+        let status;
+        
+        let obj = {
+            getName: function(){
+                this.name = prompt('Введите Ваше имя')
+            },
+            getYear: function(){
+                this.year = prompt('Введите Ваш возраст')
+            },
+            greet: function(){
+                alert('Your name is ' + this.name + 'and you are ' + status);
+            }
+            
+        }
+        if(obj.getYear < 16){
+            status = 'young man';
+        }
+        if(obj.getYear > 16 && obj.getYear < 60){
+            status = 'middle years'
+        }
+        obj.getName();
+        obj.getYear();
+        obj.greet();
     </script>
 </head>
 <body></body>
