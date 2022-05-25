@@ -6,6 +6,91 @@
     <title>Objects</title>
     
     <script>
+
+    function sum(a, b){
+        return a - b;
+
+    }
+    let result = sum(5, 10);
+    console.log(result);
+
+
+    function name(name, surname = ' surname nemae))'){
+        alert(name + ' ' + '*' + surname + '*');
+    }
+    name('Elena', 'Petrova');
+    name('Elena')
+/*
+    const number = +prompt('Введите число между 0 и 3', '');
+
+        switch(number){
+            case 0:
+                alert('nullik vveli');
+                break;
+            case 1:
+                alert('a eto edinichka uze');
+                break;
+            case 2:
+            case 3:
+                alert('da otkuda ya znay che ti vvel!!!')
+                break;
+        }
+
+
+        let question = "Enter your browser's name";
+        let useranswer = prompt(question).toLowerCase();
+        browser = ['chrome', 'firefox', 'edge', 'safari', 'opera'];
+        let edge = false;
+        let other = false;
+ 
+        for(i = 0; i < browser.length; i++){
+            if(browser[i] == 'edge' && useranswer == 'edge'){
+                edge = true;
+            }
+                else if(useranswer == browser[i]){
+                other = true;
+            }
+        }
+        
+        if (edge == true){
+            alert( "You've got the Edge!" );
+        }
+        else if (other == true){
+            alert( 'Okay we support these browsers too' );
+        }
+        else if (other == false && edge == false){
+            alert( 'We hope that this page looks ok!' );
+        }
+
+ 
+/*
+        let browser = prompt("Enter your browser's name");
+        if(browser == 'Edge'){
+            alert("You've got the Edge!");
+        }
+        else if(browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' || browser == 'Opera'){
+            alert('Okay we support these browsers too');
+        }
+        else{
+            alert( 'We hope that this page looks ok!' );
+        }
+
+        let question = prompt('А ну ка, посчитай: 2 + 2 - (6 / 3)');
+
+        switch (question){
+            case '4':
+                alert('Да ну что ты');
+                break;
+            case '2':
+                alert('В яблочко!');
+                break;
+            case '10':
+                alert('Ты перебрал');
+                break;
+            default:
+                alert('Нет таких значений');
+        }
+ 
         let q = 40
         
         let a = {
