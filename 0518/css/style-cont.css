@@ -110,7 +110,7 @@
 
   main{
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     margin: 57px auto 112px;
     width: 1140px;
     justify-content: space-evenly;
@@ -201,26 +201,41 @@
       margin-top: 32px;
   }
 
-  input[type=email], input[type=text]{
+  input[type='email'], input[type='text']{
       width: 428px;
-      height: 72px;
+      min-height: 72px;
       box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
       border-radius: 10px;
       padding: 21px 0 21px 26px;
       margin: 8px 0;
       box-sizing: border-box;
-      color: #1F3F68;
-      opacity: 0.2;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 30px;
+
   }
 
-  .container_right .inpmes{
+  textarea{
     width: 428px;
-    height: 144px;
+    min-height: 144px;
     box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
     padding: 21px 0 21px 26px;
     margin: 8px 0;
     box-sizing: border-box;
+    resize: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  textarea::placeholder, input::placeholder{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
     color: #1F3F68;
     opacity: 0.2;
   }
