@@ -80,7 +80,6 @@
   }
   
   header .container:last-child{
-      padding-top: 48px;
       box-sizing: border-box;
       height: 100%;
 
@@ -92,7 +91,7 @@
     letter-spacing: 0.04em;
     color: white;
     text-align: center;
-    margin-top: 56px;
+    margin-top: 103px;
     box-sizing: border-box;
   
   }
@@ -256,6 +255,17 @@ input[type=submit]{
     cursor: pointer;
 }
 
+main section:last-child{
+    display: block;
+}
+
+main section:last-child div{
+    margin: 96px auto 0;
+    height: 480px;
+    background-image: url(../img/maps.png);
+    background-size: 940px 480px;
+
+}
   footer {
     flex: 0 0 auto;
     background: #316099;
