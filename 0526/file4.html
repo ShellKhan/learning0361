@@ -92,17 +92,14 @@
             figures: {
                 white: [],
                 black: []
+            },
+            getPos(position) {
+                return this.board[position[0]][position[1] - 1];
+            },
+            setPos(position, value) {
+                this.board[position[0]][position[1] - 1] = value;
             }
         };
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         function ChessFigure(name, color, position) {
             this.name = name;
@@ -112,7 +109,7 @@
         function makeChFig(name, color, position) {
             let fig = new ChessFigure(name, color, position);
             chess.figures[color].push(fig);
-            chess.board[position[0]][position[1] - 1] = fig;
+            chess.setPos(position, fig);
         }
         function makeStep(position_before, position_after) {
             /*
@@ -121,8 +118,14 @@
              * 3) если фигура на поле position_before есть, берем эту фигуру и переставляем на поле position_after, если оно пустое
              * 4) не забываем указать в фигуре ее новое положение!!!
              */
-            
-            
+            if (chess.getPos(position_before) && !chess.getPos(position_after)) {
+                let fig = chess.getPos(position_before);
+                chess.setPos(position_after, fig);
+                chess.setPos(position_before, null);
+                fig.position = position_after;
+            } else {
+                console.error('Так ходить нельзя!');
+            }
         }
     </script>
 </head>
