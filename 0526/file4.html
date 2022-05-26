@@ -101,6 +101,11 @@
             }
         };
         
+        makeChFig('King', 'white', 'e1');
+        makeChFig('Queen', 'white', 'd1');
+        makeChFig('Queen', 'black', 'd8');
+        
+        
         function ChessFigure(name, color, position) {
             this.name = name;
             this.color = color;
@@ -118,14 +123,25 @@
              * 3) если фигура на поле position_before есть, берем эту фигуру и переставляем на поле position_after, если оно пустое
              * 4) не забываем указать в фигуре ее новое положение!!!
              */
-            if (chess.getPos(position_before) && !chess.getPos(position_after)) {
+            if (chess.getPos(position_before)) {
                 let fig = chess.getPos(position_before);
-                chess.setPos(position_after, fig);
-                chess.setPos(position_before, null);
-                fig.position = position_after;
-            } else {
-                console.error('Так ходить нельзя!');
+                if (!chess.getPos(position_after)) {
+                    chess.setPos(position_after, fig);
+                    chess.setPos(position_before, null);
+                    fig.position = position_after;
+                    console.log(fig.name + ' ходит');
+                    return;
+                } else if (fig.color != chess.getPos(position_after).color) {
+                    let killed = chess.getPos(position_after);
+                    chess.figures[killed.color].splice(chess.figures[killed.color].indexOf(killed), 1);
+                    chess.setPos(position_after, fig);
+                    chess.setPos(position_before, null);
+                    fig.position = position_after;
+                    console.log(fig.name + ' бьет ' + killed.name);
+                    return;
+                }
             }
+            console.error('Так ходить нельзя!');
         }
     </script>
 </head>
