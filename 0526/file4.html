@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    
+    <title>Шахматы</title>
+    
+    <script>
+        let chess = {
+            board: {
+                'a': [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                'b': [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                'c': [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                'd': [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                'e': [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                'f': [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                'g': [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                'h': [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            figures: {
+                whites: [],
+                blacks: []
+            }
+        };
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        function ChessFigure(name, color, position) {
+            this.name = name;
+            this.color = color;
+            this.position = position; // 'a1', 'h8'...
+        }
+        function makeChFig(name, color, position) {
+            let fig = new ChessFigure(name, color, position);
+            chess.figures[color].push(fig);
+            chess.board[position[0]][position[1] - 1] = fig;
+        }
+    </script>
+</head>
+<body></body>
+</html>
