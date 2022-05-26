@@ -212,7 +212,7 @@
       box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
       border-radius: 10px;
       padding: 21px 0 21px 26px;
-      margin: 8px 0;
+      margin-top: 8px;
       box-sizing: border-box;
       font-weight: 300;
       font-size: 16px;
@@ -226,7 +226,7 @@
     box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
     padding: 21px 0 21px 26px;
-    margin: 8px 0;
+    margin-top: 8px;
     box-sizing: border-box;
     resize: none;
     font-weight: 300;

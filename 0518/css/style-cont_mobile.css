@@ -47,8 +47,62 @@
         
         .container_right{
             margin: 32px 0 0;
-            width: 514px;
+            width: 343px;
+            height: 514px;
+            padding: 36px;
         }
+
+        .container_right h3{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        h5{
+            font-weight: 500;
+            line-height: 10px;
+            font-weight: 400;
+            font-size: 14px;
+
+          }
+        
+          .container_right h5:first-of-type{
+              margin-top: 36px;
+          }
+          .container_right h5:nth-of-type(2), .container_right h5:last-of-type{
+              margin-top: 21px;
+          }
+
+        input[type='email'], input[type='text']{
+            width: 272px;
+            min-height: 47px;
+            padding: 13px 0 0 22px;
+            margin-top: 5px;
+            font-size: 14px;
+      
+        }
+      
+        textarea{
+          width: 272px;
+          min-height: 93px;
+          padding: 13px 0 0 22px;
+          margin-top: 5px;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 30px;
+        }
+      
+        textarea::placeholder, input::placeholder{
+          font-size: 14px;
+        }
+      
+      input[type=submit]{
+          
+          width: 272px;
+          height: 47px;
+          margin-top: 46px;
+
+      }
             
         .maps{
             width: 100%;

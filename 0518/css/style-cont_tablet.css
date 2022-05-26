@@ -39,7 +39,10 @@
     
     .container_right{
         margin: 64px 0;
-        width: 540px;
+        width: 520px;
+        height: 780px;
+        padding: 45px;
+
     }
 
     .maps{
