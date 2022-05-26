@@ -114,6 +114,16 @@
             chess.figures[color].push(fig);
             chess.board[position[0]][position[1] - 1] = fig;
         }
+        function makeStep(position_before, position_after) {
+            /*
+             * 1) проверяем, есть ли фигура на поле position_before
+             * 2) проверяем, есть ли фигура на поле position_after
+             * 3) если фигура на поле position_before есть, берем эту фигуру и переставляем на поле position_after, если оно пустое
+             * 4) не забываем указать в фигуре ее новое положение!!!
+             */
+            
+            
+        }
     </script>
 </head>
 <body></body>
