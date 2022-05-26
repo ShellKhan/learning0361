@@ -14,29 +14,32 @@
          * 
          * **Создаем функцию-конструктор, создающую объекты типа Пользователь.
          */
-        /*
-        let User = {
-            getUserInfo() {
-                this.name = prompt('Ваше имя?');
-                this.age = +prompt('Ваш возраст?');
-            },
-            setStatus() {
-                if (this.age < 16) {
-                    this.status = 'too young';
-                } else if (this.age > 91) {
-                    this.status = 'too old';
-                } else {
-                    this.status = 'correct';
-                }
-            },
-            toString(){
-                return `object User named ${this.name} is ${this.status}`;
-            }
-        }
-        User.getUserInfo();
-        User.setStatus();
-        document.write(User);
-        */
+
+let newuser = {};
+let user = {
+    getInfo(){
+        this.name = prompt('What is your name?');
+        this.age = +prompt('How old are you?');
+    },
+    getStatus(){
+        if(this.age < 18) this.status = 'young man';
+        if(this.age > 18 && this.age < 90) this.status = 'middle man';
+        if(this.age > 90) this.status = 'Or you kidding, or you really veeeery old';
+    },
+    toString(){
+        return this.name, this.status;
+
+    },
+    addnewobj(){
+        newuser[this.name] = this.status;
+    }
+}
+user.getInfo();
+user.getStatus();
+user.addnewobj();
+console.log(newuser);
+
+/*
         function User() {
             this.getUserInfo = function() {
                 this.name = prompt('Ваше имя?');
@@ -59,6 +62,7 @@
         user.getUserInfo();
         user.setStatus();
         document.write(user);
+      */
     </script>
 </head>
 <body></body>

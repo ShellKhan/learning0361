@@ -6,7 +6,7 @@
     <title>Objects</title>
     
     <script>
-
+/*
     function sum(a, b){
         return a - b;
 
@@ -20,7 +20,7 @@
     }
     name('Elena', 'Petrova');
     name('Elena')
-/*
+
     const number = +prompt('Введите число между 0 и 3', '');
 
         switch(number){
@@ -90,6 +90,7 @@
             default:
                 alert('Нет таких значений');
         }
+
  
         let q = 40
         
@@ -103,13 +104,14 @@
             }
         };
         
-        //a.tall = 25;
-        //alert(a);
-        //alert(a.name);
-        alert(a.weight);
-        //alert(a.tall);
-        //a.throwError();
-        /*
+        a.tall = 25;
+        console.log(a);
+        console.log(a.name);
+        console.log(a.weight);
+        console.log(a.tall);
+        a.throwError();
+        
+
         let b = 'qwe';
         
         let c = b;
@@ -118,18 +120,30 @@
         
         console.log(c);
         
+*/
+let q = 40;
+let a = {
+            name: 'MyFirstObject',
+            weight: q,
+            tall: 15,
+            throwError: function(){
+                console.error(this.name);
+                console.error(this.tall);
+            }
+        };
+
         let d = a;
         
         a.weight = 50;
         
         console.log(d.weight);
         
-        a.self = d;
-        
         a.tall = function() {
             alert(15);
         }
-        */
+
+        a.tall();
+
         
         
     </script>

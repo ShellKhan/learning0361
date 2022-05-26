@@ -9,25 +9,31 @@
         let a = {
             a: 1,
             b: 2,
-            c: 3
-        }
-        
-        let b = a;
-        
-        let c = {
-            d: 'qqqq',
-            a: '1111'
+            c: 3,
+            m: 7
         };
         
-        Object.assign(c, a);
+        let b = {};
+       
+        let c = {            
+            c: 3,
+            m: 7,
+            k: 15
+        };
         
+
+        Object.assign(b, a, c);
+
+        console.log(b);
+        
+        /*
         //console.log(b === a);
         
         //console.log(c === a);
         
         //console.log(c);
         
-        let d = {};
+        //let d = {};
         
         for (let i in a) {
             d[i] = a[i];
@@ -35,7 +41,7 @@
         
         console.log(d === a);
         console.log(d);
-        
+        */
     </script>
 </head>
 <body></body>

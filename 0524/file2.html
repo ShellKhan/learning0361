@@ -16,15 +16,13 @@
         }
         
         obj['можем ли мы создать такое свойство?'] = true;
-        
-        for (let i in obj) {
+
+        obj.mama = 355;
+
+        for (let i in obj){
             console.log(i);
-            
             console.log(obj[i]);
         }
-        
-        console.error('atr1' in obj);
-        
         
     </script>
 </head>

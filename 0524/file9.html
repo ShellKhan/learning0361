@@ -9,26 +9,28 @@
         // делаем три объекта Worker
         // в объекте - имя, должность, зарплата
         // функция берет объект и сравнивает его зарплату с заданной суммой
-        function Worker(name, position, salary) {
+
+        function worker(name, profession, salary){
             this.name = name;
-            this.position = position;
+            this.profession = profession;
             this.salary = salary;
         }
-        function checkSalary(worker){
-            if (worker.salary > 0) {
-                console.log(worker.name + ' works.');
-            } else {
-                console.log(worker.name + ' fired.');
+        function Checksalary(worker){
+            if(worker.salary == 0){
+                console.log(worker.name +' '+'lodyr');
+            }else if(worker.salary >30000 && worker.salary < 100000){ 
+                console.log(worker.name +' '+'good worker');
+            }else{
+                console.log(worker.name + ' '+ 'exelent worker');
             }
         }
-        
+
         let tokar = {
             name: 'Vasya',
-            position: 'tokar',
-            salary: 150
+            profession: 'tokar',
+            salary: 40000
         }
-        
-        let pekar = new Worker('Petya', 'pekar', 100);
+        let pekar = new worker('Petya', 'pekar', 120000);
         
         let lodyr = {}
         lodyr.name = 'Senya';
@@ -36,9 +38,10 @@
         lodyr.salary = 0;
         
         
-        checkSalary(tokar);
-        checkSalary(pekar);
-        checkSalary(lodyr);
+        Checksalary(tokar);
+        Checksalary(pekar);
+        Checksalary(lodyr);
+
     </script>
 </head>
 <body></body>

@@ -10,18 +10,33 @@
          * 1) объект содержит свойство name.
          * 2) объект содержит метод getName(), получающий имя у пользователя.
          * 3) объект содержит метод greet(), выводящий алерт с приветствием пользователя по имени (например, "Привет, Вася!")
-         */
-        let obj = {
-            getName: function() {
-                this.name = prompt('Как вас зовут?');
-            },
-            greet: function() {
-                alert('Здравствуйте, ' + this.name);
-            }
-        }
         
-        obj.getName();
-        obj['greet']();
+         let hola = {
+             name: undefined,
+             getName(){
+                name = prompt('Your name, pls ');
+             },
+             greet(){
+                 alert('Hello, my friend ' + name);
+             }
+         }
+         hola.getName();
+         hola.greet();
+
+
+         */
+         let hola = {
+             getName(){
+                name = prompt('Your name, pls ');
+             },
+             greet(){
+                 alert('Hello, my friend ' + name);
+             }
+         }
+         hola.getName();
+         hola.greet();
+
+
     </script>
 </head>
 <body></body>
