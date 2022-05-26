@@ -12,6 +12,12 @@
       header .container{
           width: 704px;
       }
+      header .container:first-child{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 32px;
+        box-sizing: border-box;
+    }
      
       header .container:last-child{
           padding-top: 112px;
