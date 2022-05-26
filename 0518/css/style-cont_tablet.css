@@ -20,9 +20,10 @@
         width: 520px;
     }
     
-    main {
+    .main_block {
         width: 704px;
-        margin: 64px auto;
+        margin: 64px auto 0;
+        padding: 0 0;
     }
     
     .container_left{
@@ -33,21 +34,22 @@
         margin: 64px 0;
         width: 540px;
     }
+
+    .maps{
+        width: 100%;
+        height: 392px;
+        background-image: url(../img/maps.png);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        margin-bottom: 64px;
+    }
     
     footer .container {
       padding: 47px 0px;
       box-sizing: border-box;
       width: 704px;
   }
-
-  main section:last-child div{
-    margin: 64px auto 0;
-    width: 1000px;
-    height: 392px;
-    background-image: url(../img/maps.png);
-    background-size: 100% 392px;
-
-}
 
   footer h3 {
       margin: -16px 0 32px;
