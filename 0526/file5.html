@@ -23,10 +23,14 @@
         alert(c);
         
         function russianDate(date_string) {
-            
-            
-            
-            return new Date(...)
+            let [day, month, year] = date_string.split(' ');
+            /*
+            let day = date_string.split(' ')[0];
+            let month = date_string.split(' ')[1];
+            let year = date_string.split(' ')[2];
+            */
+            month = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'].indexOf(month);
+            return new Date(year, month, day);
         }
     </script>
 </head>
