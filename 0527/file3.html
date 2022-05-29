@@ -39,7 +39,7 @@
         setTimeout(function(){
             console.log((new Date()).getMilliseconds());
         }, 3000);
-        */
+    
         
         let a = setInterval(function(){
             console.log((new Date()).getMilliseconds());
@@ -52,7 +52,38 @@
         clearTimeout(a);
         
         clearInterval(b);
+
         
+
+        function ask(question, yes, no){
+            if(confirm(question)) yes()
+            else no();
+        }
+        
+        ask('Вы согласны?',
+        function(){
+            alert('Вы согласились');
+        },
+        function(){
+            alert('Вы отказались');
+        }
+        );
+
+
+       let quest = (question, yes, no) => {
+           if(confirm(question)) yes()
+           else no();
+    }
+       quest(
+           'Agree?',
+           () => alert('You was agreed'),
+           () => alert('You was not agreed')
+       );
+
+       */
+
+       
+
     </script>
 </head>
 <body></body>
