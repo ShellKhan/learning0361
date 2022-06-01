@@ -15,10 +15,24 @@
                 padding: 1% 0;
                 background: linear-gradient(to bottom, white 0%, cyan 60%, blue 100%);
             }
+            .third_line {
+                color: green;
+            }
+            .third-line {
+                color: blue;
+            }
         </style>
+        
+        <script>
+            console.log(document.querySelectorAll('p'));
+        </script>
     </head>
     
     <body>
+        <script>
+            console.log(document.querySelectorAll('p'));
+        </script>
+        
         <h3><span>Михаил Лермонтов</span></h3>
         <h1>ПАРУС</h1>
         
@@ -36,5 +50,26 @@
         <span>Над ним луч солнца золотой...</span><br>
         <span>А он, мятежный, просит бури,</span><br>
         <span>Как будто в бурях есть покой!</span></p>
+        
+        <script>
+            console.log(document.querySelectorAll('p'));
+            
+            document.body.style.fontSize = '32px';
+            document.body.style.fontFamily = 'Arial';
+            
+            let thr = document.querySelectorAll('span:nth-child(5)');
+            
+            thr.forEach(item => item.className = 'third_line');
+            
+            setInterval(function() {
+                thr.forEach(item => item.classList.toggle('third-line'));
+            }, 1000);
+            
+            /*
+            function changeThird(item){
+                if (item.className == 'third_line') {item.className = 'third-line'} else {item.className = 'third_line'}
+            }
+            */
+        </script>
     </body>
 </html>

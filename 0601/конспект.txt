@@ -29,7 +29,7 @@ elem.getAttribute()
 elem.setAttribute()
 elem.removeAttribute()
 
-
+elem.getBoundingClientRect() -> top, y // left, x
 
 
 
