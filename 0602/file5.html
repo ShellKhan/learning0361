@@ -65,8 +65,8 @@
     <body>
         <div class="calc">
             <div class="screen" data-empty="1">0</div>
-            <div class="button">1/x</div>
-            <div class="button"><span>x<sup>2</sup></span></div>
+            <div class="button function">1/x</div>
+            <div class="button function"><span>x<sup>2</sup></span></div>
             <div class="button clear">C</div>
             <div class="button action" data-action="divide">&divide;</div>
             <div class="button digit">7</div>
@@ -102,19 +102,56 @@
                         if (scr.innerHTML.length < 14) scr.innerHTML += e.target.innerHTML;
                     }
                 } else if (btn.classList.contains('clear')) {
-                    console.log(btn.classList);
                     scr.innerHTML = 0;
                     scr.setAttribute('data-empty', 1);
+                    memory = null;
+                    action = null;
                 } else if (btn.classList.contains('action')) {
                     if (memory && action) {
+                        let line = +scr.innerHTML;
                         switch (action) {
-                            ???????
+                            case 'divide':
+                                memory = Math.floor(memory / line);
+                            break;
+                            case 'multiple':
+                                memory = memory * line;
+                            break;
+                            case 'minus':
+                                memory = memory - line;
+                            break;
+                            case 'plus':
+                                memory = memory + line;
+                            break;
                         }
+                        scr.innerHTML = memory;
+                    } else {
+                        memory = +scr.innerHTML;
                     }
-                    
-                    /*memory = +scr.innerHTML;
                     action = btn.getAttribute('data-action');
-                    scr.setAttribute('data-empty', 1);*/
+                    scr.setAttribute('data-empty', 1);
+                } else if (btn.classList.contains('eval')) {
+                    if (memory && action) {
+                        let line = +scr.innerHTML;
+                        switch (action) {
+                            case 'divide':
+                                scr.innerHTML = Math.floor(memory / line);
+                            break;
+                            case 'multiple':
+                                scr.innerHTML = memory * line;
+                            break;
+                            case 'minus':
+                                scr.innerHTML = memory - line;
+                            break;
+                            case 'plus':
+                                scr.innerHTML = memory + line;
+                            break;
+                        }
+                        memory = null;
+                        action = null;
+                        scr.setAttribute('data-empty', 1);
+                    }
+                } else {
+                    console.log('this button is under construction');
                 }
             }))
         </script>
