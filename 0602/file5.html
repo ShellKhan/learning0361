@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="ru">
     <head>
-        <title>Events</title>
+        <title>Calculator</title>
         
         <meta charset="utf-8">
         
@@ -40,7 +40,7 @@
             .button:active {
                 box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5);
             }
-            .digit, .nodigit {
+            .digit, .sign, .point {
                 background: white;
                 color: black;
             }
@@ -65,8 +65,8 @@
     <body>
         <div class="calc">
             <div class="screen" data-empty="1">0</div>
-            <div class="button function">1/x</div>
-            <div class="button function"><span>x<sup>2</sup></span></div>
+            <div class="button oneonx">1/x</div>
+            <div class="button square"><span>x<sup>2</sup></span></div>
             <div class="button clear">C</div>
             <div class="button action" data-action="divide">&divide;</div>
             <div class="button digit">7</div>
@@ -81,79 +81,124 @@
             <div class="button digit">2</div>
             <div class="button digit">3</div>
             <div class="button action" data-action="plus">&plus;</div>
-            <div class="button nodigit">+/-</div>
+            <div class="button sign">+/-</div>
             <div class="button digit">0</div>
-            <div class="button nodigit">.</div>
+            <div class="button point">.</div>
             <div class="button eval">&equals;</div>
         </div>
         
         <script>
             let scr = document.querySelector('.screen');
-            let memory, action;
+            let errorflag = false;
+            let emptyflag = true;
+            let memory = null;
+            let action = null;
             
+            document.querySelector('.clear').addEventListener('click', function(){
+                scr.innerHTML = 0;
+                memory = null;
+                action = null;
+                emptyflag = true;
+                errorflag = false;
+            });
             
-            document.querySelectorAll('.button').forEach(btn => btn.addEventListener('click',function(e){
-                let btn = e.target;
-                if (btn.classList.contains('digit')) {
-                    if ((scr.getAttribute('data-empty') == 1) || (scr.innerHTML == 0)) {
-                        scr.innerHTML = e.target.innerHTML;
-                        scr.setAttribute('data-empty', 0);
-                    } else {
-                        if (scr.innerHTML.length < 14) scr.innerHTML += e.target.innerHTML;
-                    }
-                } else if (btn.classList.contains('clear')) {
-                    scr.innerHTML = 0;
-                    scr.setAttribute('data-empty', 1);
+            document.querySelector('.eval').addEventListener('click', function(){
+                if ((memory !== null) && action && !errorflag) {
+                    evaluate();
                     memory = null;
                     action = null;
-                } else if (btn.classList.contains('action')) {
-                    if (memory && action) {
-                        let line = +scr.innerHTML;
-                        switch (action) {
-                            case 'divide':
-                                memory = Math.floor(memory / line);
-                            break;
-                            case 'multiple':
-                                memory = memory * line;
-                            break;
-                            case 'minus':
-                                memory = memory - line;
-                            break;
-                            case 'plus':
-                                memory = memory + line;
-                            break;
-                        }
-                        scr.innerHTML = memory;
-                    } else {
-                        memory = +scr.innerHTML;
-                    }
-                    action = btn.getAttribute('data-action');
-                    scr.setAttribute('data-empty', 1);
-                } else if (btn.classList.contains('eval')) {
-                    if (memory && action) {
-                        let line = +scr.innerHTML;
-                        switch (action) {
-                            case 'divide':
-                                scr.innerHTML = Math.floor(memory / line);
-                            break;
-                            case 'multiple':
-                                scr.innerHTML = memory * line;
-                            break;
-                            case 'minus':
-                                scr.innerHTML = memory - line;
-                            break;
-                            case 'plus':
-                                scr.innerHTML = memory + line;
-                            break;
-                        }
-                        memory = null;
-                        action = null;
-                        scr.setAttribute('data-empty', 1);
-                    }
-                } else {
-                    console.log('this button is under construction');
+                    emptyflag = true;
                 }
-            }))
+            });
+            
+            document.querySelectorAll('.action').forEach(item => item.addEventListener('click', function(e){
+                if (!errorflag) {
+                    if ((memory !== null) && action) {
+                        evaluate();
+                    }
+                    memory = +scr.innerHTML;
+                    action = e.target.getAttribute('data-action');
+                    emptyflag = true;
+                }
+            }));
+            
+            document.querySelectorAll('.digit').forEach(item => item.addEventListener('click', function(e){
+                if (!errorflag) {
+                    if (emptyflag || (scr.innerHTML == '0')) {
+                        scr.innerHTML = e.target.innerHTML;
+                        emptyflag = false;
+                    } else {
+                        if (scr.innerHTML.replace(/\D/g, '').length < 13) {
+                            scr.innerHTML += e.target.innerHTML;
+                        }
+                    }
+                }
+            }));
+            
+            document.querySelector('.point').addEventListener('click', function(){
+                if (!errorflag) {
+                    if (emptyflag || (scr.innerHTML == '0')) {
+                        scr.innerHTML = '0.';
+                        emptyflag = false;
+                    } else {
+                        if (!scr.innerHTML.includes('.')) {
+                            scr.innerHTML += '.';
+                        }
+                    }
+                }
+            });
+            
+            document.querySelector('.sign').addEventListener('click', function(){
+                if (!errorflag) {
+                    if (scr.innerHTML.includes('-')) {
+                        scr.innerHTML = scr.innerHTML.slice(1);
+                    } else {
+                        scr.innerHTML = '-' + scr.innerHTML;
+                    }
+                }
+            });
+            
+            document.querySelector('.oneonx').addEventListener('click', function(){
+                if (!errorflag) {
+                    render(1 / +scr.innerHTML);
+                }
+            });
+            
+            document.querySelector('.square').addEventListener('click', function(){
+                if (!errorflag) {
+                    render(+scr.innerHTML * +scr.innerHTML);
+                }
+            });
+            
+            function evaluate() {
+                switch (action) {
+                    case 'divide':
+                        render(memory / +scr.innerHTML);
+                    break;
+                    case 'multiple':
+                        render(memory * +scr.innerHTML);
+                    break;
+                    case 'minus':
+                        render(memory - +scr.innerHTML);
+                    break;
+                    case 'plus':
+                        render(memory + +scr.innerHTML);
+                    break;
+                }
+            }
+            
+            function render(num) {
+                if (Math.abs(num) >= 100000000000000) {
+                    errorflag = true;
+                    scr.innerHTML = 'ERROR!';
+                } else if (Math.abs(num) >= 1) {
+                    scr.innerHTML = parseFloat(num.toPrecision(13));
+                } else if (Math.abs(num) >= 0.000001) {
+                    scr.innerHTML = parseFloat(num.toFixed(12));
+                } else {
+                    scr.innerHTML = num.toFixed(12);
+                }
+            }
         </script>
     </body>
 </html>
