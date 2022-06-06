@@ -25,6 +25,15 @@ const FIGURESYMBOL = {
         black: '&#9823;'
     }
 };
+const CHECKER = {
+    king(a, b) {
+        return (Math.abs(a.x - b.x) <= 1) && (Math.abs(a.y - b.y) <= 1);
+    },
+    knight(a, b) {
+        return ((Math.abs(a.x - b.x) == 1) && (Math.abs(a.y - b.y) == 2)) || ((Math.abs(a.x - b.x) == 2) && (Math.abs(a.y - b.y) == 1));
+    },
+    // TODO добавить проверки для остальных фигур
+};
 let figureset = [];
 let startPosition = [
     'king white e1',
@@ -64,19 +73,17 @@ function getPosition(cell) {
     return letter + digit;
 }
 
-function checkMove(pos1, pos2, fig) {
-    const CHECKER = {
-        king(a, b) {
-            return (Math.abs(a.x - b.x) <= 1) && (Math.abs(a.y - b.y) <= 1);
-        },
-        knight(a, b) {
-            return ((Math.abs(a.x - b.x) == 1) && (Math.abs(a.y - b.y) == 2)) || ((Math.abs(a.x - b.x) == 2) && (Math.abs(a.y - b.y) == 1));
-        }
-        // TODO добавить проверки для остальных фигур
-    }
+function checkMove(pos1, pos2, fig, beat=false) {
     let a = getCellSelector(pos1, false);
     let b = getCellSelector(pos2, false);
-    return CHECKER[fig.name](a, b);
+    let action = CHECKER[fig.name];
+    if (fig.name == 'pawn') {
+        // TODO расписать варианты для цветов, начального положения (двойной ход) и боя пешек (в том числе бой на проходе)
+    } else if (fig.name == 'king') {
+        // TODO расписать варианты для длинной и короткой рокировок.
+        // ВАЖНО!!! король и ладья не должны сделать ни одного хода перед рокировкой.
+    }
+    return action(a, b);
 }
 
 function ChessFigure(name, color, position) {
@@ -104,21 +111,38 @@ function startUp(pos) {
     }
 }
 
-function move(start, finish) {
+function move(beat=false) {
+    let start = document.querySelector('.start');
+    let finish = document.querySelector('.finish');
     start.classList.remove('start');
     finish.classList.remove('finish');
     let pos1 = getPosition(start);
     let pos2 = getPosition(finish);
-    let fig;
+    let fig, beatfig;
     for (f of figureset) {
         if (f.position == pos1) {
             fig = f;
+        } else if (beat) {
+            if (f.position == pos2) {
+                beatfig = f;
+            }
         }
     }
-    if (checkMove(pos1, pos2, fig)) {
-        fig.clear();
-        fig.position = pos2;
-        fig.render();
+    if (beat) {
+        if (beatfig.color != fig.color) {
+            if (checkMove(pos1, pos2, fig, true)) {
+                figureset.splice(figureset.indexOf(beatfig));
+                fig.clear();
+                fig.position = pos2;
+                fig.render();
+            }
+        }
+    } else {
+        if (checkMove(pos1, pos2, fig)) {
+            fig.clear();
+            fig.position = pos2;
+            fig.render();
+        }
     }
 }
 
@@ -136,9 +160,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (this.classList.contains('start')) {
                     this.classList.remove('start');
                 } else {
+                    this.classList.add('finish');
                     if (!this.innerHTML) {
-                        this.classList.add('finish');
-                        move(document.querySelector('.start'), document.querySelector('.finish'));
+                        move();
+                    } else {
+                        move(true);
                     }
                 }
             }
