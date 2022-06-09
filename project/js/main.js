@@ -25,8 +25,11 @@ $(function(){
         */
     }
     
-    
-    
+    if ($('.catalog').length) {
+        $('.catmenu').click(function(){
+            $(this).toggleClass('open')
+        })
+    }
     
     
     
