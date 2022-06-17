@@ -26,6 +26,9 @@
                 top: 380px;
                 left: 380px;
             }
+            .hidden {
+                display: none !important;
+            }
         </style>
         
         <script>
@@ -34,15 +37,25 @@
             });
             
             function clicker(event) {
-                // click
-                console.log(event);
-                // coords cursor
-                // coords outer
-                // new coords inner - random
-                // check borders
-                // block off
-                // block on
+                let outercoords = document.querySelector('.outer').getBoundingClientRect();
+                let block = document.querySelector('.inner');
                 
+                let cursorX = event.clientX - outercoords.left;
+                let cursorY = event.clientY - outercoords.top;
+                
+                let newleft;
+                do {
+                    newleft = Math.floor(Math.random() * 760);
+                } while ((cursorX >= newleft) && (cursorX < newleft + 40));
+                
+                let newtop;
+                do {
+                    newtop = Math.floor(Math.random() * 760);
+                } while ((cursorY >= newtop) && (cursorY < newtop + 40));
+                
+                block.classList.add('hidden');
+                block.setAttribute('style', `left:${newleft}px;top:${newtop}px;`);
+                block.classList.remove('hidden');
             }
         </script>
     </head>
