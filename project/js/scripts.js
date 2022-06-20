@@ -311,4 +311,5 @@ function addTovar(tovar){
         basket = [tovar];
     }
     localStorage.setItem('addTovar', JSON.stringify(basket));
+    $(window).trigger('storage');
 }
